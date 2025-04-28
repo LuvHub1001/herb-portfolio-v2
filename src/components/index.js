@@ -7,6 +7,8 @@ import Introduce from "./about_me/Introduce";
 import Skill from "./about_me/Skill";
 import AboutContainer from "./about_me/AboutContainer";
 
+import ProjectList from "./portfolio/ProjectList";
+
 export {
   ErrorBoundary,
   Loading,
@@ -15,4 +17,5 @@ export {
   Introduce,
   Skill,
   AboutContainer,
+  ProjectList,
 };
