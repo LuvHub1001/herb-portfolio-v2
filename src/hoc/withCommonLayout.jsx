@@ -8,7 +8,6 @@ function withCommonLayout(Component) {
         <div>
           <Component />
         </div>
-        <Footer />
       </div>
     );
   };
