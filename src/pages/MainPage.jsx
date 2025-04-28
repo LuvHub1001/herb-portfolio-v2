@@ -1,5 +1,11 @@
+import { AboutContainer } from "../components/";
+
 function MainPage() {
-  return <></>;
+  return (
+    <>
+      <AboutContainer />
+    </>
+  );
 }
 
 export default MainPage;
