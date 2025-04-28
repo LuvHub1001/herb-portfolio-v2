@@ -37,7 +37,9 @@ function Sidebar() {
 
           <div className="flex flex-col mt-5 text-center items-center gap-6">
             <div className="about-me flex items-center gap-1 text-[20px]">
-              <span className="cursor-pointer">About Me</span>
+              <span className="cursor-pointer" onClick={() => navigate("/")}>
+                About Me
+              </span>
             </div>
             <div className="about-me flex items-center gap-1 text-[20px]">
               <span
