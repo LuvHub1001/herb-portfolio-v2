@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 function Sidebar() {
+  const navigate = useNavigate();
+
   return (
     <div className="fixed">
       <div className="w-[280px] h-screen bg-[#3C7EEB] text-white">
@@ -36,10 +40,20 @@ function Sidebar() {
               <span className="cursor-pointer">About Me</span>
             </div>
             <div className="about-me flex items-center gap-1 text-[20px]">
-              <span className="cursor-pointer">Portfolio</span>
+              <span
+                className="cursor-pointer"
+                onClick={() => navigate("/portfolio")}
+              >
+                Portfolio
+              </span>
             </div>
             <div className="about-me flex items-center gap-1 text-[20px]">
-              <span className="cursor-pointer">Resume</span>
+              <span
+                className="cursor-pointer"
+                onClick={() => navigate("/resume")}
+              >
+                Resume
+              </span>
             </div>
           </div>
         </div>
