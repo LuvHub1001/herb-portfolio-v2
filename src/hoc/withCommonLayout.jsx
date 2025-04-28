@@ -5,7 +5,7 @@ function withCommonLayout(Component) {
     return (
       <div>
         <Sidebar />
-        <div>
+        <div className="ml-[280px]">
           <Component />
         </div>
       </div>
