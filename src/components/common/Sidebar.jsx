@@ -1,6 +1,6 @@
 function Sidebar() {
   return (
-    <div>
+    <div className="fixed">
       <div className="w-[280px] h-screen bg-[#3C7EEB] text-white">
         <div className="flex flex-col w-full items-center justify-center">
           <div className="mt-10 text-2xl font-bold">DongYeop Lee</div>
