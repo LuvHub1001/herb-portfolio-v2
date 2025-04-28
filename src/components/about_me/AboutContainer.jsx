@@ -1,7 +1,12 @@
-import { Introduce } from "../";
+import { Introduce, Skill } from "../";
 
 function AboutContainer() {
-  return <Introduce />;
+  return (
+    <>
+      <Introduce />
+      <Skill />
+    </>
+  );
 }
 
 export default AboutContainer;
