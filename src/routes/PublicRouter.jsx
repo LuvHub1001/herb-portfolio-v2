@@ -12,6 +12,9 @@ const WrappedPortfolioPage = withCommonLayout(PortfolioPage);
 const PortfolioDetailPage = lazy(() => import("../pages/PortfolioDetailPage"));
 const WrappedPortfolioDetailPage = withCommonLayout(PortfolioDetailPage);
 
+const ResumePage = lazy(() => import("../pages/ResumePage"));
+const WrappedResumePage = withCommonLayout(ResumePage);
+
 function PublicRouter() {
   return (
     <BrowserRouter>
@@ -23,6 +26,7 @@ function PublicRouter() {
           path="/portfolio/:title"
           element={<WrappedPortfolioDetailPage />}
         />
+        <Route path="/resume" element={<WrappedResumePage />} />
       </Routes>
     </BrowserRouter>
   );

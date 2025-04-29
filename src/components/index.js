@@ -10,6 +10,8 @@ import AboutContainer from "./about_me/AboutContainer";
 import ProjectList from "./portfolio/ProjectList";
 import ProjectDetail from "./portfolio/ProjectDetail";
 
+import Resume from "./resume/Resume";
+
 import ScrollToTop from "./util/ScrollToTop";
 
 export {
@@ -22,5 +24,6 @@ export {
   AboutContainer,
   ProjectList,
   ProjectDetail,
+  Resume,
   ScrollToTop,
 };
