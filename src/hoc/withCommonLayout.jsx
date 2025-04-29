@@ -8,7 +8,9 @@ function withCommonLayout(Component) {
         <div className="ml-[280px]">
           <Component />
         </div>
-        <Footer />
+        <div className="ml-[120px] mt-[150px]">
+          <Footer />
+        </div>
       </div>
     );
   };
