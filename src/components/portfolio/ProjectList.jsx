@@ -14,7 +14,7 @@ function ProjectList() {
   return (
     <>
       <div className="mt-20 ml-40">
-        <p className="text-2xl font-bold">닐리리맘보</p>
+        <p className="text-2xl font-bold">프로젝트</p>
       </div>
 
       <div className="mt-5 ml-40 grid grid-cols-2 gap-10">
