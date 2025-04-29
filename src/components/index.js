@@ -8,6 +8,9 @@ import Skill from "./about_me/Skill";
 import AboutContainer from "./about_me/AboutContainer";
 
 import ProjectList from "./portfolio/ProjectList";
+import ProjectDetail from "./portfolio/ProjectDetail";
+
+import ScrollToTop from "./util/ScrollToTop";
 
 export {
   ErrorBoundary,
@@ -18,4 +21,6 @@ export {
   Skill,
   AboutContainer,
   ProjectList,
+  ProjectDetail,
+  ScrollToTop,
 };
