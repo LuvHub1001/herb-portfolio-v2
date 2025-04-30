@@ -9,126 +9,155 @@ function ProjectDetail() {
   data = project_data.filter((item) => item.id === currentPath);
 
   return (
-    <>
-      <div className="mt-20 ml-40">
-        <div className="project-box flex w-[1110px] h-[453px] bg-[#FAFAFA]">
-          <div className="project-image">
-            <img
-              className="w-[300px] h-[400px] m-5"
-              src={data.map((item) => item.img)}
-            />
-          </div>
-          <div className="project-info m-5 ml-10">
-            {data.map((item, idx) => {
-              return (
-                <div key={idx}>
-                  <div className="project-title font-bold text-2xl">
-                    {item.title}
-                  </div>
-
-                  <div className="mt-5">
-                    <span className="font-bold">규모:</span>
-                    <span>&nbsp;&nbsp;{item.size}</span>
-                  </div>
-                  <div className="mt-3">
-                    <span className="font-bold">팀 인원:</span>
-                    <span>&nbsp;&nbsp;{item.team}</span>
-                  </div>
-
-                  <div className="mt-3">
-                    <span className="font-bold">개발 기간:</span>
-                    <span>&nbsp;&nbsp;{item.during}</span>
-                  </div>
-
-                  <div className="mt-3">
-                    <span className="font-bold">GitHub:</span>
-                    <span>&nbsp;&nbsp;{item.github}</span>
-                  </div>
-
-                  <div className="mt-3">
-                    <span className="whitespace-pre-line text-[14px]">
-                      {item.description}
-                    </span>
-                  </div>
-
-                  <div className="mt-2">
-                    <span className="font-bold">Project Skill</span>
-                    <div className="mt-1">
-                      <span className="whitespace-pre-line text-[14px]">
-                        {item.projectSkill}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+    <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+      <div className="flex flex-col lg:flex-row">
+        <div className="w-full lg:w-1/3 p-4 lg:p-5">
+          <img
+            className="w-full h-auto object-cover rounded-lg shadow-sm"
+            src={data.map((item) => item.img)}
+            alt="프로젝트 이미지"
+          />
         </div>
+        <div className="w-full lg:w-2/3 p-4 lg:p-5">
+          {data.map((item, idx) => (
+            <div key={idx} className="space-y-3">
+              <h1 className="text-xl lg:text-2xl font-bold text-gray-800">
+                {item.title}
+              </h1>
 
-        <div className="project-introduce mt-20">
-          <div className="text-3xl font-bold mb-3">
-            프로젝트 제작 동기 및 소개
-          </div>
-          {data.map((item, idx) => {
-            return (
-              <span key={idx} className="whitespace-pre-line text-[18px]">
-                {item.projectMotive}
-              </span>
-            );
-          })}
-        </div>
-
-        {currentPath.includes("algorithm") ? null : (
-          <div className="project-images mt-20">
-            <div className="text-3xl font-bold mb-3">프로젝트 사진</div>
-            {data.map((item, idx) => {
-              return (
-                <div key={idx} className="flex mt-10 gap-10">
-                  {item.projectImages.map((item, idx) => {
-                    return (
-                      <div key={idx}>
-                        <img src={item} className="w-[600px] h-[400px]" />
-                      </div>
-                    );
-                  })}
-                </div>
-              );
-            })}
-          </div>
-        )}
-
-        <div className="project-images mt-20">
-          <div className="text-3xl font-bold mb-3">프로젝트 후기 및 Link</div>
-          {data.map((item, idx) => {
-            return (
-              <div key={idx}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <span className="whitespace-pre-line text-[18px]">
-                    {item.projectReview}
+                  <span className="font-medium text-gray-700">규모:</span>
+                  <span className="ml-2 text-gray-600 text-sm">
+                    {item.size}
                   </span>
                 </div>
-                <div className="mt-2">
-                  <p>
-                    GitHub: &nbsp;
-                    <a href={item.github} target="_blank">
-                      {item.github}
-                    </a>
-                  </p>
-                  {item.manageLink.length !== 0 ? (
-                    <p>
-                      배포: &nbsp;
-                      <a href={item.manageLink} target="_blank">
-                        {item.manageLink}
-                      </a>
-                    </p>
-                  ) : null}
+                <div>
+                  <span className="font-medium text-gray-700">팀 인원:</span>
+                  <span className="ml-2 text-gray-600 text-sm">
+                    {item.team}
+                  </span>
+                </div>
+                <div>
+                  <span className="font-medium text-gray-700">개발 기간:</span>
+                  <span className="ml-2 text-gray-600 text-sm">
+                    {item.during}
+                  </span>
+                </div>
+                <div>
+                  <span className="font-medium text-gray-700">GitHub:</span>
+                  <a
+                    href={item.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 text-blue-600 hover:text-blue-800 break-all text-sm"
+                  >
+                    {item.github}
+                  </a>
                 </div>
               </div>
-            );
-          })}
+
+              <div className="mt-3">
+                <div className="text-gray-600 text-sm space-y-1">
+                  {item.description.split("\n").map((line, lineIdx) => (
+                    <p key={lineIdx}>{line}</p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-3">
+                <h2 className="font-medium text-gray-700">Project Skill</h2>
+                <div className="mt-1 text-gray-600 text-sm space-y-1">
+                  {item.projectSkill.split("\n").map((line, lineIdx) => (
+                    <p key={lineIdx}>{line}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+
+      <div className="p-4 lg:p-5 border-t border-gray-100">
+        <h2 className="text-lg lg:text-xl font-bold text-gray-800 mb-3">
+          프로젝트 제작 동기 및 소개
+        </h2>
+        {data.map((item, idx) => (
+          <div key={idx} className="text-gray-600 text-sm space-y-1">
+            {item.projectMotive.split("\n").map((line, lineIdx) => (
+              <p key={lineIdx}>{line}</p>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      {!currentPath.includes("algorithm") && (
+        <div className="p-4 lg:p-5 border-t border-gray-100">
+          <h2 className="text-lg lg:text-xl font-bold text-gray-800 mb-3">
+            프로젝트 사진
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {data.map((item, idx) => (
+              <div key={idx} className="space-y-3">
+                {item.projectImages.map((img, imgIdx) => (
+                  <div
+                    key={imgIdx}
+                    className="overflow-hidden rounded-lg shadow-sm"
+                  >
+                    <img
+                      src={img}
+                      className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
+                      alt={`프로젝트 이미지 ${imgIdx + 1}`}
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className="p-4 lg:p-5 border-t border-gray-100">
+        <h2 className="text-lg lg:text-xl font-bold text-gray-800 mb-3">
+          프로젝트 후기 및 Link
+        </h2>
+        {data.map((item, idx) => (
+          <div key={idx} className="space-y-3">
+            <div className="text-gray-600 text-sm space-y-1">
+              {item.projectReview.split("\n").map((line, lineIdx) => (
+                <p key={lineIdx}>{line}</p>
+              ))}
+            </div>
+            <div className="space-y-2">
+              <p>
+                <span className="font-medium text-gray-700">GitHub:</span>
+                <a
+                  href={item.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 text-blue-600 hover:text-blue-800 break-all text-sm"
+                >
+                  {item.github}
+                </a>
+              </p>
+              {item.manageLink && (
+                <p>
+                  <span className="font-medium text-gray-700">배포:</span>
+                  <a
+                    href={item.manageLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 text-blue-600 hover:text-blue-800 break-all text-sm"
+                  >
+                    {item.manageLink}
+                  </a>
+                </p>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 

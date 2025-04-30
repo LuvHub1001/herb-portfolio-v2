@@ -1,8 +1,8 @@
 function Footer() {
   return (
-    <div className="flex min-w-screen h-25 mt-10 border-t-3 border-[#FAFAFA] items-center justify-center ">
-      ⓒ 2025. Herb Corp. All rights reserved.
-    </div>
+    <footer className="text-center text-gray-500 text-sm py-4">
+      <p>© 2024 DongYeop Lee. All rights reserved.</p>
+    </footer>
   );
 }
 

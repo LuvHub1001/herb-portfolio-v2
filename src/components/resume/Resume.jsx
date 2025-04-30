@@ -1,24 +1,24 @@
 function Resume() {
   return (
     <div>
-      <div className="header flex w-full h-[150px] justify-center items-center bg-[#FAFAFA] text-3xl font-bold">
+      <div className="header flex w-full h-[150px] justify-center items-center bg-[#FAFAFA] text-2xl md:text-3xl font-bold">
         온라인 이력서
       </div>
 
       <div className="flex justify-center">
-        <div className="inline-block h-auto mt-10 rounded-2xl shadow-2xl">
-          <div className="basic-info flex w-[1200px] h-auto p-10 items-center border-b-1 border-gray-300">
-            <div className="w-[732px] h-[96px] p-5 ">
-              <p className="text-4xl font-bold pb-3">이동엽 (LEE DONG YEOP)</p>
+        <div className="inline-block h-auto mt-10 rounded-2xl shadow-2xl w-full md:w-auto">
+          <div className="basic-info flex flex-col md:flex-row w-full md:w-[1200px] h-auto p-5 md:p-10 items-center border-b-1 border-gray-300">
+            <div className="w-full md:w-[732px] h-auto md:h-[96px] p-5 text-center md:text-left">
+              <p className="text-2xl md:text-4xl font-bold pb-3">이동엽 (LEE DONG YEOP)</p>
               <p className="text-gray-500">Junior FrontEnd Developer</p>
             </div>
 
-            <div className="w-[244px] h-[96px] pl-10 pt-2.5 border-l-4 border-[#3C7EEB]">
+            <div className="w-full md:w-[244px] h-auto md:h-[96px] pl-5 md:pl-10 pt-2.5 border-l-0 md:border-l-4 border-[#3C7EEB]">
               <p className="text-[12px]">☎️010-4161-7791</p>
               <p className="text-[12px]">📬dy7791@naver.com</p>
               <p className="text-[12px]">
                 💻
-                <a href="https://github.com/LuvHub1001" target="_blank">
+                <a href="https://github.com/LuvHub1001" target="_blank" className="break-all">
                   https://github.com/LuvHub1001
                 </a>
               </p>
@@ -26,11 +26,11 @@ function Resume() {
             </div>
           </div>
 
-          <div className="detail-info flex pl-10 w-[1200px] h-[300px] items-center border-b-1 border-gray-300">
-            <div className="image-area flex items-center">
-              <img src="/images/취업사진.jpg" className="w-[160px] h-[180px]" />
+          <div className="detail-info flex flex-col md:flex-row p-5 md:pl-10 w-full md:w-[1200px] h-auto md:h-[300px] items-center border-b-1 border-gray-300">
+            <div className="image-area flex items-center mb-5 md:mb-0">
+              <img src="/images/취업사진.jpg" className="w-[120px] md:w-[160px] h-[135px] md:h-[180px]" alt="프로필 사진" />
             </div>
-            <div className="ment-area flex flex-col gap-1 ml-20">
+            <div className="ment-area flex flex-col gap-1 md:ml-20 text-sm md:text-base">
               <p>
                 학원에서 Java, Spring Framework 교육을 수강하여 본격적으로 웹
                 개발에 입문하였습니다.
@@ -52,30 +52,28 @@ function Resume() {
                 환경에서 구동해가며 실행 결과를 팀원들에게 공유하는 문화를
                 즐깁니다.
               </p>
-
               <p>
                 의사소통을 가장 중요하게 여깁니다. [기획자/디자이너] 분들과
                 회의를 거쳐 조정이 필요한 부분들을 조율하고 피드백을 받아
               </p>
-
               <p>최선의 결과물을 내기 위해 노력합니다.</p>
             </div>
           </div>
 
-          <div className="project-area mt-10 pl-10 w-[1200px] items-center border-b-1 border-gray-300">
-            <p className="text-3xl pl-2  text-[#3C7EEB] font-bold border-l-4 border-[#3C7EEB]">
+          <div className="project-area mt-10 p-5 md:pl-10 w-full md:w-[1200px] items-center border-b-1 border-gray-300">
+            <p className="text-2xl md:text-3xl pl-2 text-[#3C7EEB] font-bold border-l-4 border-[#3C7EEB]">
               <span>PROJECTS</span>
             </p>
             <div className="mt-10">
-              <div className="project-title flex h-20 justify-between items-center">
-                <span className="font-bold text-2xl">
+              <div className="project-title flex flex-col md:flex-row h-auto md:h-20 justify-between items-start md:items-center gap-2 md:gap-0">
+                <span className="font-bold text-xl md:text-2xl">
                   Herb-Blog (FrontEnd & BackEnd)
                 </span>
-                <span className="pr-5 text-[13px] text-gray-500">
+                <span className="text-[13px] text-gray-500 break-all">
                   https://herb-blog.vercel.app
                 </span>
               </div>
-              <div className="project-content flex flex-col gap-2">
+              <div className="project-content flex flex-col gap-2 mt-5 md:mt-0">
                 <p>
                   나의 일상을 기록하고, 학습한 내용을 정리할 공간이 필요하다
                   싶어서 블로그 운영을 고민했었습니다.
@@ -96,13 +94,13 @@ function Resume() {
             </div>
 
             <div className="mt-10">
-              <div className="project-title flex h-20 justify-between items-center">
-                <span className="font-bold text-2xl">Herb-Image-Server</span>
-                <span className="pr-5 text-[13px] text-gray-500">
+              <div className="project-title flex flex-col md:flex-row h-auto md:h-20 justify-between items-start md:items-center gap-2 md:gap-0">
+                <span className="font-bold text-xl md:text-2xl">Herb-Image-Server</span>
+                <span className="text-[13px] text-gray-500 break-all">
                   https://github.com/LuvHub1001/herb-image-server
                 </span>
               </div>
-              <div className="project-content flex flex-col gap-2">
+              <div className="project-content flex flex-col gap-2 mt-5 md:mt-0">
                 <p>
                   사이드 프로젝트를 진행하면서 이미지 파일 업로드 기능을 구현할
                   때 단순히 백엔드 서버만을 통해서
@@ -120,13 +118,13 @@ function Resume() {
             </div>
 
             <div className="mt-10">
-              <div className="project-title flex h-20 justify-between items-center">
-                <span className="font-bold text-2xl">Herb-Culture</span>
-                <span className="pr-5 text-[13px] text-gray-500">
+              <div className="project-title flex flex-col md:flex-row h-auto md:h-20 justify-between items-start md:items-center gap-2 md:gap-0">
+                <span className="font-bold text-xl md:text-2xl">Herb-Culture</span>
+                <span className="text-[13px] text-gray-500 break-all">
                   https://herb-culture.netlify.app
                 </span>
               </div>
-              <div className="project-content flex flex-col gap-2 mb-10">
+              <div className="project-content flex flex-col gap-2 mt-5 md:mt-0 mb-10">
                 <p>
                   API로 전달받은 데이터를 핸들링 연습을 해보고자 서울시
                   공공데이터 포털을 탐색하다가, 서울시 문화행사 정보 API를 찾게
@@ -146,19 +144,19 @@ function Resume() {
             </div>
           </div>
 
-          <div className="project-area mt-10 pl-10 w-[1200px] items-center border-b-1 border-gray-300">
-            <p className="text-3xl pl-2  text-[#3C7EEB] font-bold border-l-4 border-[#3C7EEB]">
+          <div className="project-area mt-10 p-5 md:pl-10 w-full md:w-[1200px] items-center border-b-1 border-gray-300">
+            <p className="text-2xl md:text-3xl pl-2 text-[#3C7EEB] font-bold border-l-4 border-[#3C7EEB]">
               <span>WORK-EXPERIENCE</span>
             </p>
 
-            <div className="experience-title flex h-20 justify-between items-center mt-10">
-              <span className="font-bold text-2xl">(주)재능이아카데미</span>
-              <span className="pr-5 text-[13px] text-gray-500">
+            <div className="experience-title flex flex-col md:flex-row h-auto md:h-20 justify-between items-start md:items-center gap-2 md:gap-0 mt-10">
+              <span className="font-bold text-xl md:text-2xl">(주)재능이아카데미</span>
+              <span className="text-[13px] text-gray-500">
                 IT지원팀 / 정직원 (2022.11 ~ 재직중)
               </span>
             </div>
 
-            <div className="experience-content flex flex-col gap-2 mb-10">
+            <div className="experience-content flex flex-col gap-2 mt-5 md:mt-0 mb-10">
               <p>
                 (주)재능교육의 IT계열사이며 사업조직의 선생님들께서 이용하시는
                 그룹웨어, 전산, 회원 데이터들을 관리하고 운영합니다.
@@ -181,14 +179,14 @@ function Resume() {
               </p>
             </div>
 
-            <div className="experience-title flex h-20 justify-between items-center mt-10">
-              <span className="font-bold text-2xl">웅진</span>
-              <span className="pr-5 text-[13px] text-gray-500">
+            <div className="experience-title flex flex-col md:flex-row h-auto md:h-20 justify-between items-start md:items-center gap-2 md:gap-0 mt-10">
+              <span className="font-bold text-xl md:text-2xl">웅진</span>
+              <span className="text-[13px] text-gray-500">
                 ICT 웹 개발팀 / 인턴 (2022.06 ~ 2022.09)
               </span>
             </div>
 
-            <div className="experience-content flex flex-col gap-2 mb-10">
+            <div className="experience-content flex flex-col gap-2 mt-5 md:mt-0 mb-10">
               <p>
                 3개월간 인턴 활동을 수행하였으며 교육, 과제 수행을
                 진행하였습니다.
@@ -201,7 +199,7 @@ function Resume() {
                 당시 진행 중이던 팀 내 프로젝트의 테스트 케이스 작성을
                 도왔습니다.
               </p>
-              <p className="mb-10">
+              <p>
                 교육 받은 내용을 토대로 학습지 선생님들께서 이용하시는 ERP
                 시스템 내에서 회원 CRUD 기능을 추가하는 과제를 수행하였습니다.
               </p>
