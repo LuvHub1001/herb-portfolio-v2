@@ -1,6 +1,6 @@
 function Skill() {
   return (
-    <div className="mt-10 px-4 md:px-10 w-full h-full">
+    <div className="mt-10 px-4 lg:ml-[-40px] md:px-10 w-full h-full">
       <div className="text-xl md:text-4xl font-bold">
         <span className="h-[100%] border-l-4 border-[#3C7EEB]">
           &nbsp;Skill

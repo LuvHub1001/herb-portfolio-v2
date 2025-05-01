@@ -5,7 +5,7 @@ function Introduce() {
 
   return (
     <div className="min-w-full h-100 bg-[#FAFAFA]">
-      <div className="flex h-[100%] items-center justify-around">
+      <div className="flex h-[100%] items-center justify-between">
         <div className="text-area">
           <p className="text-4xl font-bold mb-5">이동엽</p>
           <p className="text-[24px] text-gray-400 mb-5">
@@ -32,9 +32,6 @@ function Introduce() {
               온라인 이력서
             </button>
           </div>
-        </div>
-        <div className="image-area">
-          <img className="rounded-2xl w-[50%] h-[50%]" src="/images/temp.jpg" />
         </div>
       </div>
     </div>
